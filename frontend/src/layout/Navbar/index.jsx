@@ -1,8 +1,8 @@
-import React from 'react'
+// import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div className="bg-slate-500">Navbar</div>
   )
 }
 
