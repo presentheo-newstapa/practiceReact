@@ -13,7 +13,7 @@ function Layout() {
   return (
     <div className='flex flex-col h-screen justify-between'>
       <Navbar />
-        <main className='mb-auto w-10/12'>
+        <main className='mb-auto'>
           <Outlet />
         </main>
       <Footer />
