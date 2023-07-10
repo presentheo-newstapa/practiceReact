@@ -33,6 +33,8 @@ app.post('/', (req, res) => {
   res.json(req.body);
 })
 
+app.use('/users', require('./routes/users'))
+
 app.use((err, req, res, next) => {
   res.status(err.status || 500)
   res.send(err.message || '서버 에러가 발생했습니다.')

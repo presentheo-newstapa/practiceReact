@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { registeruser } from "./thunkFunctions";
+import { registerUser } from "./thunkFunctions";
+import { toast } from "react-toastify";
 
 const initialState = {
   userData: {
@@ -20,15 +21,17 @@ const userSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(registeruser.pending, (state) => {
+      .addCase(registerUser.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(registeruser.fulfilled, (state) => {
+      .addCase(registerUser.fulfilled, (state) => {
         state.isLoading = false;
+        toast.info('회원가입을 성공했습니다.');
       })
-      .addCase(registeruser.rejected, (state, action) => {
+      .addCase(registerUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+        toast.error(action.payload);
       })
 
   }

@@ -8,10 +8,20 @@ import LoginPage from './pages/LoginPage/index';
 import RegisterPage from './pages/RegisterPage/index';
 import Navbar from './layout/Navbar/index';
 import Footer from './layout/Footer/index';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 function Layout() {
   return (
     <div className='flex flex-col h-screen justify-between'>
+
+<ToastContainer
+  position='bottom-right'
+  theme='light'
+  pauseOnHover
+  autoClose={1500}
+/>
+
       <Navbar />
         <main className='mb-auto'>
           <Outlet />

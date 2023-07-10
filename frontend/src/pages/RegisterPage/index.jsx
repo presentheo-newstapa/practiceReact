@@ -1,7 +1,7 @@
 // import React from 'react'
 import { useForm } from 'react-hook-form'
 // import { axios } from 'axios'
-import { registeruser } from '../../store/thunkFunctions';
+import { registerUser } from '../../store/thunkFunctions';
 import { useDispatch } from 'react-redux';
 
 const RegisterPage = () => {
@@ -24,7 +24,7 @@ const RegisterPage = () => {
       image: 'https://placehold.co/600x400/EEE/31343C'
     }
 
-    dispatch(registeruser(body))
+    dispatch(registerUser(body))
 
     
     reset();
